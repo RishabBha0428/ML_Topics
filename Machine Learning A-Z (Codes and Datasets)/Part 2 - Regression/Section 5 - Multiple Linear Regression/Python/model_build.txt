@@ -1,0 +1,27 @@
+There are five ways for building a model based on the predictor variables
+
+1. All in --> based on domain knowledge, we know we want to include each variable for the model
+
+2. **Backward Elimination**
+    a. Select a significance level to stay in the model
+    b. Fit the model with all possible predictors
+    c. Consider the predictor with the highest p-value. If p > SL, keep moving on, or else stop
+    d. Remove the predictor
+    e. Fit the Model without this predictor
+
+3. Forward Selection  
+    a. Select a significance model to enter the model
+    b. Fit all simple regression models y -xn and select the one with the lowest p-value
+    c. Keep this variable and fit all possible models with one extra predictor added to the ones we already have
+    d. Consider the predictor with the lowest p value. If p < SL, go to STEP C, otherwise finish
+
+4. Bidirectional Elimination
+    a. Select a significance leve to enter and to stay in the model
+    b. Perform all steps of Forward Selection (old vars must have P < SL to enter)
+    c. Perform all steps of Backward Elimination (old vars must have P < SL to stay )
+    d. No new variables can enter and no old variables can exist
+
+5. All Possible models (Resource Heavy!!!)
+    a. Select a criterion of goodness of fit
+    b. Construct all possible regression models
+    c. Select the one with the best criterion
